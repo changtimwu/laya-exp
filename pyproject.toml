@@ -1,0 +1,8 @@
+[project]
+name = "laya-exp"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "laya-mlx[demo]>=0.2.0",
+]
