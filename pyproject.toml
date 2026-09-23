@@ -1,8 +1,22 @@
 [project]
 name = "laya-exp"
 version = "0.1.0"
-description = "Add your description here"
+description = "Laya experiments and a typesafe_sdk-compatible adapter for running Jev code on Laya"
 requires-python = ">=3.12"
 dependencies = [
     "laya-mlx[demo]>=0.2.0",
+    "pydantic>=2.7",
 ]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/laya_typesafe"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
